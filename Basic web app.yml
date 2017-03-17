@@ -1,0 +1,17 @@
+apiVersion: extensions/v1beta1
+kind: Job
+metadata:
+  name: hello-worldjob
+spec:
+  template:
+    metadata:
+      labels:
+        app: hello-worldjob
+      name: hello-worldjob
+    spec:
+      containers:
+      - image: hello-world:nanoserver
+        name: hello-world
+      restartPolicy: Never
+
+---
